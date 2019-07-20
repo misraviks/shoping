@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'shoping';
+  viewRecipe:boolean=true;
+  viewCart:boolean=false;
+  
+  recipeShown()
+  {
+    this.viewRecipe=true;
+    this.viewCart=false;
+  }
+  cartShown()
+  {
+    this.viewRecipe=false;
+    this.viewCart=true;
+  }
 }

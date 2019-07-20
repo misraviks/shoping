@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import  {NgModel} from '@angular/forms'
+import  { FormsModule} from '@angular/forms'
 import { AppComponent } from './app.component';
 import {HeaderComponent} from './header/header.component';
 import { RecipesComponent } from './recipes/recipes.component';
@@ -18,11 +18,12 @@ import { ShopingEditComponent } from './shoping-list/shoping-edit/shoping-edit.c
     RecipeItemComponent,
     RecipeDetailComponent,
     ShopingListComponent,
-    ShopingEditComponent,
-    NgModel
+    ShopingEditComponent
+  
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

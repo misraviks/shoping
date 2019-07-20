@@ -1,7 +1,10 @@
-<app-header></app-header>
+<app-header
+(showRecipe)="recipeShown()" 
+(showCart)="cartShown()"
+></app-header>
 <div class="container">
   <div class="col-md-12">
-    <app-recipes></app-recipes>
-    <app-shoping-list></app-shoping-list>
+    <app-recipes *ngIf="viewRecipe"></app-recipes>
+    <app-shoping-list *ngIf="viewCart"></app-shoping-list>
   </div>
 </div>
